@@ -11,8 +11,9 @@
       rel="stylesheet"
       href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
     />
+    <link rel="manifest" href="./dist/manifest.json" />
 
-    <script src="./dist/app.bundle.js" defer></script>
+    <script src="./dist/app.bundle.js"></script>
   </head>
   <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
@@ -234,7 +235,7 @@
       </div>
     </footer>
   </body>
-  <script>
+  <script type="text/javascript">
     (function () {
       if ("serviceWorker" in navigator) {
         navigator.serviceWorker
