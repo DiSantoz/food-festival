@@ -1,6 +1,7 @@
 require("bootstrap");
+const createEl = require("./domMethods");
 
-if (window.location.href.indexOf("tickets") > -1) {
+$(document).ready(function () {
   const purchaseBtn = document.getElementById("purchaseBtn");
   const purchaseEmail = document.getElementById("purchaseEmail");
   const modalEl = document.querySelector(".modal-content");
@@ -10,7 +11,6 @@ if (window.location.href.indexOf("tickets") > -1) {
   function purchaseTicket() {
     modalEl.removeChild(modalBodyEl);
     modalEl.removeChild(modalFooterEl);
-
     modalEl.append(
       createEl(
         "div",
@@ -24,4 +24,4 @@ if (window.location.href.indexOf("tickets") > -1) {
     );
   }
   purchaseBtn.addEventListener("click", purchaseTicket);
-}
+});
